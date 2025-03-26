@@ -1,0 +1,364 @@
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0e0042;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.5s ease, transform 0.3s ease; /* Добавляем плавное изменение фона и масштаба */
+    transform-origin: center center; /* Scaling from the center */
+    position: relative; /* Ensure stacking control with z-index */
+    z-index: 1; /* Default stacking */
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(180, 0, 0);
+    transform: scale(1.1); /* Slight enlargement on hover */
+    transition: transform 0.2s ease-in-out; /* Smooth transition */
+    z-index: 10; /* Bring the hovered element to the front */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .navbar1 {
+    background-color: #1f0b0b; /* Dark background color */
+    overflow: hidden;
+    padding: 5px 10px; /* Smaller padding for a compact navbar */
+  }
+  
+  .navbar1 a {
+    float: left;
+    color: rgb(147, 255, 120); /* Text color */
+    text-align: center;
+    padding: 5px 10px; /* Smaller padding for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Smaller font size */
+    border-radius: 5px; /* Add some rounding for the button */
+  }
+  
+  .navbar1 a:hover {
+    background-color: #ffe2e2; /* Background color on hover */
+    color: black; /* Text color on hover */
+    transform: scale(1.1); /* Slight enlargement on hover */
+    transition: transform 0.2s ease-in-out; /* Smooth transition */
+    border-radius: 10px; /* Rounded corners */
+  }
+
+/* Выпадающий контейнер */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Кнопка выпадающего списка */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    transition: background-color 0.5s ease, transform 0.3s ease; /* Плавное изменение цвета и масштаба */
+}
+
+.dropdown .dropbtn:hover {
+    transform: scale(1.2); /* Уменьшаем размер при наведении */
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0; /* Скрываем меню через прозрачность */
+    visibility: hidden; /* Делаем его невидимым */
+    transform: translateY(-10px); /* Смещение для анимации */
+    transition: opacity 1s ease, transform 1s ease, visibility 1s ease; /* Анимация */
+}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {
+    opacity: 1; /* Плавное появление */
+    visibility: visible; /* Делаем меню видимым */
+    transform: translateY(0); /* Убираем смещение */
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 1s ease, transform 0.3s ease; /* Добавляем плавное изменение фона и масштаба */
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd; /* Цвет при наведении на ссылку */
+    transform: scale(1.2); /* Уменьшаем размер ссылки */
+}
+
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {
+    opacity: 1; /* Плавное появление */
+    visibility: visible; /* Делаем меню видимым */
+    transform: translateY(0); /* Убираем смещение */
+}
+
+/*Navbar css code*//*Navbar css code*//*Navbar css code*//*Navbar css code*//*Navbar css code*//*Navbar css code*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffeaec85;
+    color: #333;
+    margin: 20px;
+  }
+
+  header {
+    position: relative;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: blur(3px); /* Применяем размытие */
+}
+.header-text {
+    position: absolute; /* Позволяет разместить текст поверх изображения */
+    top: 50%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвиг текста, чтобы он был точно в центре */
+    color: white; /* Белый цвет текста для контраста */
+    font-size: 2.5rem; /* Размер шрифта */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Лёгкая тень для улучшения читаемости */
+    margin: 0; /* Убираем отступы по умолчанию */
+}
+.current-time {
+    font-size: 14px;
+    color: #62ff91;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+}
+.table-image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 3px solid rgb(70, 70, 70);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.image-tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-image {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+/*Для изображения на главной----------------------------------------*/
+.tooltip-text {
+    visibility: hidden;
+    width: 220px;
+    background-color: #3989c9;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 70%;
+    left: 80%;
+    margin-left: -110px;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+.image-tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+/*Для изображения на главной----------------------------------*/
+
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.text-biography {
+    text-indent: 10%;
+    margin-left: 10%;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.biography {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: left;
+}
+
+.image {
+    flex: 1 1 calc(25% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    position: relative;
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.image img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image:hover img {
+    transform: scale(1.5);
+}
+
+.hover_image {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0 0;
+}
+
+.image:hover p {
+    visibility: visible;
+    opacity: 1;
+}
+
+.under_image {
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.container-1,
+.container-2 {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    margin-bottom: 100px;
+}
+
+.text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+footer {
+    background-color: #2c2c2c;
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   text-align: center; 
+   width: 99%;   
+   font-size: 19px;
+    font-weight: bold;
+    color: #fafaff;  
+}
+
+
+
+.table-disc {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-disc th,
+.table-disc td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.text-1{
+    padding-bottom: 50px;
+}

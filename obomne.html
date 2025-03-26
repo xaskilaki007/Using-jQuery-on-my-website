@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Контактная форма</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>    
+    <nav class="navbar">
+        <a href="index.html">Главная</a>
+        <a href="photoalbum.html">Лучшие изображения по мнению пользователей</a>
+        <a href="contakts.html">Контакт</a>
+        <a href="test.html">Учёба</a>
+        <div class="dropdown">
+            <button class="dropbtn"> Мои интересы</button>
+            <div class="dropdown-content" id="interests-list">
+              <a href="#game">Компьютерные игры</a>
+              <a href="#lampa">Люстры</a>
+              <a href="#history">История</a>
+            </div>
+        </div>
+        <a href="history.html">История</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1 align='center'>Автобиография</h1><br>
+            <div class="text-biography">
+                <p>
+                    Меня зовут Пётр, я родился в городе Симферополе где-то в районе ул. Пушкина. С рождения я увлекался программированием, когда папа купил ноутбук я поставил на него Shadow Fight в играх ВКонтакте и был очень счастлив<br><br>
+                </p>
+                <img src="images/shadowfight.jpg" alt="" id="game">
+            </div>
+            <div class="biography">
+                <div class="text-biography" id="lampa">
+                    <p>
+                        Я с ранних лет очень любил люстры и не упускал возможностей сфотографироваться с невероятными творениями людей.
+                    </p>
+                </div>
+                <div class="image-tooltip-container">
+                    <img src="images/Я-003.jpg" alt="Пример изображения" class="tooltip-image" >
+                    <p class="tooltip-text">Шпаков П.Н. студент 3 курса СевГУ специальности Прикладная Информатика возле люстры в театре им. Луначарского</p>
+                    <p class="just-text">Шпаков П.Н. в театре</p>
+                </div>
+            </div>
+            <div class="biography">
+                <div class="text-biography" id="history">
+                    <p>
+                        Я всегда немного был заинтересован историей великих людей, меня волновало не то что они сделали, а как добились своих высот, как они сделали то что не удавалось другим?
+                        Что ими двигало когда все были против них? Отличный пример дедушка Ленин, который перевернул страну с головы на ноги!
+                    </p>
+                </div>
+                <div class="image-tooltip-container">
+                    <img src="images/Я-002.jpg" alt="Пример изображения" class="tooltip-image">
+                    <p class="tooltip-text">Шпаков П.Н. студент 3 курса СевГУ специальности Прикладная Информатика возле памятника Владимира Ильича Ленина</p>
+                    <p class="just-text">Шпаков П.Н. возле <br> университета имени Курчатова</p>
+                </div>
+                <div id="Бетховен">
+                    <img src="images/Бетховен.webp" alt="Бетховен" class="tooltip-image">
+                    <p class="tooltip-text">Понимаю твою страсть! Бетховен – это что-то особенное. Его музыка пробуждает самые глубокие чувства и образы. Когда я слышу его мелодии, я словно переношусь в другой мир, где каждая нота имеет своё значение и передаёт неизведанные эмоции. Его симфонии как будто проникают в самую душу и рассказывают истории без слов. Я чувствую себя будто на волне звуков, которые то стремительно уносят меня вперёд, то мягко обнимают тишиной.</p>
+                    <p class="just-text">Бетховен умел передавать через музыку то, что невозможно выразить словами. Его композиции наполнены таким богатством и глубиной, что каждый раз находишь что-то новое, слушая их. В его произведениях сочетаются ярость и нежность, радость и печаль, что делает их поистине универсальными и вечными. Он словно поэт, который рисует свои картины звуками, и каждый может найти в его музыке что-то своё, что отзовётся в сердце и останется там надолго.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2024 Starrrrrrrrrrrling.</p>
+    </footer>
+
+    <section id="contact">
+        
+    </section>
+
+    <script src="scripts/arguments-interests.js"></script>
+    <script src="scripts/history.js"></script>
+</body>
+</html>

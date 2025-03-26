@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>НейроКонтакты</title>
+    <link rel="stylesheet" href="css/contacts.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Главная</a>
+        <a href="photoalbum.html">Лучшие изображения по мнению пользователей</a>
+        <a href="#">Контакт</a>
+        <a href="test.html">Учёба</a>
+        <div class="dropdown">
+            <button class="dropbtn" id="myInterestsButton"> Мои интересы</button>
+            <div class="dropdown-content" id="interests-list">
+                <a href="obomne.html#game">Компьютерные игры</a>
+                <a href="obomne.html#lampa">Люстры</a>
+                <a href="obomne.html#history">История</a>
+            </div>
+        </div>
+        <div id="current-time" class="current-time"></div>
+        <a href="history.html">История</a>
+    </nav>
+    <main class="postcard">
+        <h1>Контакт</h1>
+        <form id="contactForm" novalidate>
+            <div class="form-row">
+                <label for="fullname">Фамилия Имя Отчество</label>
+                <input type="text" id="fullname" data-tooltip="Введите ваше имя" name="fullname" required>
+                <span class="error-message">Должно быть три слова</span>
+            </div>
+
+            <div class="form-row">
+                <label for="group">Возраст</label>
+                       
+                <select id="group" name="group" required>
+                    <option value="" disabled selected>Выберите возраст</option>
+                    <optgroup label="16-20">
+                        <option value="16">16</option>
+                        <option value="20">20</option>
+                    </optgroup>
+                    <optgroup label="20+">
+                        <option value="30">до 30</option>
+                        <option value="30+">больше 30</option>
+                    </optgroup>
+                </select>
+                
+                
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" data-tooltip="Введите ваш email" name="email" required>
+                <span class="error-message">Введите корректный email</span>
+            </div>
+
+            <div class="form-row">
+                <label for="message">Сообщение</label>
+                <textarea id="message" data-tooltip="Введите ваше сообщение" name="message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-row">
+                <label for="birthday">Дата рождения</label>
+                <input id="birthday" name="birthday" type="text" readonly>
+                <div class="calendar" id="calendar">
+                    <div class="calendar-header">
+                        <button id="prevMonth" type="button" aria-label="Предыдущий месяц">←</button>
+                        <select id="yearSelect"></select>
+                        <span id="monthDisplay"></span>
+                        <button id="nextMonth" type="button" aria-label="Следующий месяц">→</button>
+                    </div>
+                    <div class="calendar-body">
+                        <div id="daysOfWeek"></div>
+                        <div id="calendarDays"></div>
+                    </div>
+                </div>
+                <span id="birthdayError" class="error-message">Дата не выбрана</span>
+            </div>
+
+            <div class="form-row">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" data-tooltip="Введите ваш номер телефона(Пример: +79781234567)" name="phone" pattern="\+?[0-9\s\-\(\)]{11,}" required>
+                <span class="error-message">Введите корректный телефон (+7, +3, +1 и не менее 11 символов)</span>
+            </div>
+
+            <div class="form-row">
+                <button type="submit" id="submitButton" disabled>Отправить</button>
+                <button type="button" id="resetButton">Очистить</button>
+            </div>
+        </form>
+        <div id="popover" class="popover"></div>
+    </main>
+
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <span class="close" id="modalClose">&times;</span>
+            <p>Вы уверены, что хотите очистить форму?</p>
+            <button id="confirmReset">Да</button>
+            <button id="cancelReset">Нет</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Starrrrrrrrrrrling</p>
+    </footer>
+
+    <script src="js/contact_validation.js"></script>
+    <script src="js/birthday.js"></script>
+    <script src="js/arguments-interests.js"></script>
+    <script src="scripts/history.js"></script>
+    <script src="js/popover.js"></script>
+</body>
+</html>

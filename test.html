@@ -1,0 +1,141 @@
+<!-- Файл test.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по дисциплине</title>
+    <link rel="stylesheet" href="css/test.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Главная</a>
+        <a href="photoalbum.html">Лучшие изображения по мнению пользователей</a>
+        <a href="contakts.html">Контакт</a>
+        <a href="#">Учёба</a>
+        <div class="dropdown">
+            <button class="dropbtn"> Мои интересы</button>
+            <div class="dropdown-content" id="interests-list">
+              <a href="#game">Компьютерные игры</a>
+              <a href="#lampa">Люстры</a>
+              <a href="#history">История</a>
+            </div>
+        </div>
+        <a href="history.html">История</a>
+    </nav>
+    <div>
+        <h1>Севастопольский государственный университет</h1>
+    </div>
+    <div class-caffedra>
+        <p>Кайфедра <Информационные Системы></p>
+    </div>
+        <caption>Таблица 1.6 – Общий вид перечня дисциплин,<br> вариант 2</caption>
+        <table class="table-disc">
+            <tr>
+                <th rowspan="3">№</th>
+                <th rowspan="3">Дисциплина</th>
+                <th colspan="12">Часов в неделю <br>(Лекций, Лаб.раб, Практ. раб)</th>
+            </tr>
+            <tr>
+                <th colspan="6">1 курс</th>
+                <th colspan="6">2 курс</th>
+            </tr>
+            <tr>
+                <th colspan="3">1 сем</th>
+                <th colspan="3">2 сем</th>
+                <th colspan="3">1 сем</th>
+                <th colspan="3">2 сем</th>
+            </tr>
+            <tr>
+                <td>1</td><td><i>Экология</i></td><td>2</td><td>1</td><td>0</td><td>3</td><td>2</td><td>4</td><td>1</td><td>2</td><td>3</td><td>0</td><td>1</td><td>2</td>
+            </tr>
+            <tr>
+                <td>2</td><td><i>Высшая математика</i></td><td>3</td><td>1</td><td>4</td><td>0</td><td>2</td><td>4</td><td>3</td><td>2</td><td>1</td><td>3</td><td>4</td><td>2</td>
+            </tr>
+            <tr>
+                <td>3</td><td><i>Русский язык</i></td><td>1</td><td>3</td><td>0</td><td>2</td><td>3</td><td>1</td><td>4</td><td>0</td><td>3</td><td>2</td><td>1</td><td>0</td>
+            </tr>
+            <tr>
+                <td>4</td><td><i>Основы дискретной математики</i></td><td>2</td><td>1</td><td>3</td><td>0</td><td>2</td><td>1</td><td>3</td><td>4</td><td>2</td><td>1</td><td>3</td><td>0</td>
+            </tr>
+            <tr>
+                <td>5</td><td><i>Основы программирования и алгоритмические языки</i></td><td>1</td><td>4</td><td>2</td><td>3</td><td>1</td><td>0</td><td>3</td><td>2</td><td>4</td><td>1</td><td>3</td><td>0</td>
+            </tr>
+            <tr>
+                <td>6</td><td><i>Основы экологии</i></td><td>3</td><td>2</td><td>1</td><td>4</td><td>3</td><td>1</td><td>2</td><td>0</td><td>4</td><td>3</td><td>1</td><td>2</td>
+            </tr>
+            <tr>
+                <td>7</td><td><i>Теория вероятности и математическая статистика</i></td><td>0</td><td>2</td><td>4</td><td>1</td><td>3</td><td>2</td><td>4</td><td>1</td><td>3</td><td>0</td><td>2</td><td>4</td>
+            </tr>
+            <tr>
+                <td>8</td><td><i>Физика</i></td><td>2</td><td>1</td><td>3</td><td>0</td><td>2</td><td>1</td><td>3</td><td>4</td><td>2</td><td>1</td><td>3</td><td>0</td>
+            </tr>
+            <tr>
+                <td>9</td><td><i>Основы электротехники и электроники</i></td><td>1</td><td>4</td><td>2</td><td>3</td><td>1</td><td>0</td><td>3</td><td>2</td><td>4</td><td>1</td><td>3</td><td>0</td>
+            </tr>
+            <tr>
+                <td>10</td><td><i>Численные методы в информатике</i></td><td>3</td><td>2</td><td>1</td><td>4</td><td>3</td><td>1</td><td>2</td><td>0</td><td>4</td><td>3</td><td>1</td><td>2</td>
+            </tr>
+            <tr>
+                <td>11</td><td><i>Методы исследования операций</i></td><td>0</td><td>2</td><td>4</td><td>1</td><td>3</td><td>2</td><td>4</td><td>1</td><td>3</td><td>0</td><td>2</td><td>4</td>
+            </tr>
+            
+            
+            <tr>
+            </tr>
+        </table>
+
+
+        <form class="contact-form" action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <h2>Введите ваши данные</h2>
+            <label for="fio">Фамилия Имя Отчество:</label>
+            <input type="text" id="fio" name="fio" required>
+
+            <label for="group">Группа:</label>
+            <select id="group" name="group" required>
+                <optgroup label="1 курс">
+                    <option value="group1">Группа 1</option>
+                    <option value="group2">Группа 2</option>
+                </optgroup>
+                <optgroup label="2 курс">
+                    <option value="group3">Группа 1</option>
+                    <option value="group4">Группа 2</option>
+                    <option value="group3">Группа 3</option>
+                    <option value="group4">Группа 4</option>
+                </optgroup>
+            </select>
+
+            <h2>Ответьте на вопросы</h2>
+            <label for="question1">Какой первый интерес Петра?</label>
+            <input type="text" id="question1" name="question1" required>
+
+            <label for="question2">Какой второй интерес Петра?</label>
+            <input type="text" id="question2" name="question2" required>
+
+            <label for="question3">Какой третий интерес Петра?</label>
+            <input type="text" id="question3" name="question3" required>
+            <label for="question4">Вид тестирования при котором тестировщик знает, как работает программа и какие функции выполняет каждый её блок. </label>
+            <div class="radio-group">
+                <label for="option1">Тестирование методом "белого ящика"</label>
+                <input type="radio" id="option1" name="option" value="option1" required>
+                
+            </div>
+            <div class="radio-group">
+                <label for="option2">Тестирование методом "черного ящика"</label>
+                <input type="radio" id="option2" name="option" value="option2">
+                
+            </div>
+            
+
+            <button type="submit">Отправить</button>
+            <button type="reset">Очистить форму</button>
+        </form>
+    <footer>
+        <p>© 2024 Starrrrrrrrrrrling.</p>
+    </footer>
+    <script src="js/test.js"></script>
+    <script src="scripts/arguments-interests.js"></script>
+    <script src="scripts/history.js"></script>
+</body>
+</html>

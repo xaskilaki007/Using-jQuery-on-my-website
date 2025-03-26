@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Главная</title>
+        <link rel="stylesheet" href="css/main.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="#">Главная</a>
+            <a href="photoalbum.html">Лучшие изображения по мнению пользователей</a>
+            <a href="contakts.html">Контакт</a>
+            <a href="test.html">Учёба</a>
+            <a href="history.html">История</a>
+            <div class="dropdown">
+                <button class="dropbtn" id="myInterestsButton"> Мои интересы</button>
+                <div class="dropdown-content" id="interests-list">
+                    <a href="obomne.html#game">Компьютерные игры</a>
+                    <a href="obomne.html#lampa">Люстры</a>
+                    <a href="obomne.html#history">История</a>
+                </div>
+            </div>
+            <div id="current-time" class="current-time"></div>
+            
+        </nav>
+        <div class="container">
+            <div class="content">
+                <h1 align='center'>Аннотация</h1><br>
+                <p>
+                    Применение нейронных сетей в искусстве поднимает множество этических вопросов. В частности, обсуждаются проблемы авторства и авторских прав, а также парадокс обучения нейросети, при котором она может усиливать негативные стереотипы, такие как расовые или гендерные, заложенные в её модель.<br><br>
+                </p>
+                <div class="table-image-container">
+                    <!-- Таблица -->
+                    <table>
+                        <caption>Личные данные</caption>
+                        <tr class="table-001">
+                            <td>ФИО:</td>
+                            <td>Шпаков Пётр Николаевич</td>
+                        </tr>
+                        <tr>
+                            <td>Группа:</td>
+                            <td>ПИ/б-22-2-о</td>
+                        </tr>
+                        <tr>
+                            <td>Лабораторная №1:</td>
+                            <td>«Исследование возможностей языка разметки гипертекстов HTML и каскадных таблиц стилей CSS»</td>
+                        </tr>
+                    </table>
+            
+                    <!-- Изображение с описанием -->
+                    <div class="image-tooltip-container">
+                        <img src="images/Я.jpg" alt="Пример изображения" class="tooltip-image">
+                        <p class="tooltip-text">Шпаков П.Н. студент 3 курса СевГУ специальности Прикладная Информатика</p>
+                    </div>
+                
+            </div>
+        </div>
+        <footer>
+            <p>© 2024 Starrrrrrrrrrrling.</p>
+        </footer>
+        <script src="scripts/arguments-interests.js"></script>
+        <script src="js/current-time.js"></script>
+        <script src="scripts/history.js"></script>
+    </body>
+</html>

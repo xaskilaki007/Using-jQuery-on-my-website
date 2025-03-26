@@ -1,0 +1,397 @@
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0e0042;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.5s ease, transform 0.3s ease; /* Добавляем плавное изменение фона и масштаба */
+  transform-origin: center center; /* Scaling from the center */
+  position: relative; /* Ensure stacking control with z-index */
+  z-index: 1; /* Default stacking */
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(180, 0, 0);
+  transform: scale(1.1); /* Slight enlargement on hover */
+  transition: transform 0.2s ease-in-out; /* Smooth transition */
+  z-index: 10; /* Bring the hovered element to the front */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.navbar1 {
+  background-color: #1f0b0b; /* Dark background color */
+  overflow: hidden;
+  padding: 5px 10px; /* Smaller padding for a compact navbar */
+}
+
+.navbar1 a {
+  float: left;
+  color: rgb(147, 255, 120); /* Text color */
+  text-align: center;
+  padding: 5px 10px; /* Smaller padding for links */
+  text-decoration: none; /* Remove underline */
+  font-size: 14px; /* Smaller font size */
+  border-radius: 5px; /* Add some rounding for the button */
+}
+
+.navbar1 a:hover {
+  background-color: #ffe2e2; /* Background color on hover */
+  color: black; /* Text color on hover */
+  transform: scale(1.1); /* Slight enlargement on hover */
+  transition: transform 0.2s ease-in-out; /* Smooth transition */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Выпадающий контейнер */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Кнопка выпадающего списка */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  transition: background-color 0.5s ease, transform 0.3s ease; /* Плавное изменение цвета и масштаба */
+}
+
+.dropdown .dropbtn:hover {
+  transform: scale(1.2); /* Уменьшаем размер при наведении */
+}
+
+/* Выпадающее содержимое (скрыто по умолчанию) */
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  opacity: 0; /* Скрываем меню через прозрачность */
+  visibility: hidden; /* Делаем его невидимым */
+  transform: translateY(-10px); /* Смещение для анимации */
+  transition: opacity 1s ease, transform 1s ease, visibility 1s ease; /* Анимация */
+}
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {
+  opacity: 1; /* Плавное появление */
+  visibility: visible; /* Делаем меню видимым */
+  transform: translateY(0); /* Убираем смещение */
+}
+
+/* Ссылки внутри выпадающего списка */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: background-color 1s ease, transform 0.3s ease; /* Добавляем плавное изменение фона и масштаба */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd; /* Цвет при наведении на ссылку */
+  transform: scale(1.2); /* Уменьшаем размер ссылки */
+}
+
+
+/* Показать выпадающее меню при наведении курсора */
+.dropdown:hover .dropdown-content {
+  opacity: 1; /* Плавное появление */
+  visibility: visible; /* Делаем меню видимым */
+  transform: translateY(0); /* Убираем смещение */
+}
+  /*Для навбара ------------------------------------------*/
+  
+  header {
+    position: relative;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: blur(3px); /* Применяем размытие */
+  }
+  .header-text {
+    position: absolute; /* Позволяет разместить текст поверх изображения */
+    top: 50%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    transform: translate(-50%, -50%); /* Сдвиг текста, чтобы он был точно в центре */
+    color: white; /* Белый цвет текста для контраста */
+    font-size: 2.5rem; /* Размер шрифта */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Лёгкая тень для улучшения читаемости */
+    margin: 0; /* Убираем отступы по умолчанию */
+  }
+  
+  
+  
+  /*Navbar css code*//*Navbar css code*//*Navbar css code*//*Navbar css code*//*Navbar css code*//*Navbar css code*/
+  .error-message {
+    display: none;
+    color: red;
+    font-size: 14px;
+  }
+  
+  
+  /*Для навбара ------------------------------------------*/
+main {
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 15px;
+    font-family: sans-serif;
+  }
+  h1 {
+    font-family: sans-serif;
+    font-size: 25px;
+    text-align: center; 
+  }
+  h2 {
+    font-size: 15px;
+    text-align: center; 
+  }
+  span {
+    margin-top: 10px;
+  }
+  .linkable {
+    scroll-margin-top: 55px;
+  }
+  .image-wrapper {
+    float: right;
+    margin-left: 10px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    color: #000000;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  th, td {
+    border: 1px solid #000000;
+    padding: 5px;
+    text-align: left;
+  }
+  
+  
+  /* Навигационная панель */
+  header {
+    font-family: sans-serif;
+    font-size: 15px;
+    background-color: #000000;
+  }
+  .main-header {
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+  }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  nav ul li {
+    margin-right: 15px;
+    margin-top: 0;
+  }
+  nav p {
+    margin: 0;
+  }
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(173, 173, 173);
+  }
+  nav ul li a:hover {
+    color: #ffffff;
+  }
+  #currentDateTime {
+    text-align: right;
+    color: white;
+    font-weight: bold;
+  }
+  
+  
+  /* Выпадающее меню "Мои интересы" */
+  .dropdown-content {
+    width: 120px;
+    display: none;
+    position: absolute;
+    background-color: #efefef;
+    list-style: none;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .dropdown-content a {
+    width: 100%;
+    color: #000000;
+    display: block;
+    padding: 7px;
+  }
+  .dropdown-content a:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+  
+  
+  /* Проверка заполнения формы "Контакт" */ 
+  .error-message {
+    display: none;
+    color: red;
+    margin-top: 5px;
+  }
+  .error-input {
+    border: 1px solid red;
+  }
+  .valid-input {
+    border: 1px solid green;
+  }
+  
+  
+  /* Проверка заполнения формы "Тест" */
+  .red-border {
+    border: 2px solid red;
+  }
+    
+  
+  /* Календарь */
+  .calendar {
+    text-decoration: none;
+    color: #000000;
+    font-size: 15px;
+    font-family: sans-serif;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 100%;
+    display: none;
+    padding: 5px;
+    width: 300px;
+  }
+  .calendar--active {
+    display: block;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }  
+  .calendar__days {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .calendar__day {
+    font-weight: bold;
+    padding-right: 5px;
+    color: #000000;
+  }
+  .calendar__day, .calendar__date {
+    transition: 0.1s;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+  }
+  .calendar__date:not(.calendar__date--empty):hover {
+    background: #000000;
+    color: #ffffff;
+  }
+  .calendar__date {
+    cursor: pointer;
+  }
+  .calendar__dates {
+    display: grid;
+    gap: 0px;
+    grid-template-columns: repeat(7, 1fr);
+    margin-left: 5px;
+  }
+  .calendar__date--empty {
+    cursor: auto;
+    background: transparent;
+  }
+  .calendar__header {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  
+  /* Фотоальбом */
+  #photo-album {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+  }
+  .photo-container img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .caption {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  
+  /* Модальное окно для фотоальбома */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .modal-content {
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .modal-content img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }

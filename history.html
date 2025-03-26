@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="css/history.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">Главная</a>
+        <a href="photoalbum.html">Лучшие изображения по мнению пользователей</a>
+        <a href="contakts.html">Контакт</a>
+        <a href="test.html">Учёба</a>
+        <div class="dropdown">
+            <button class="dropbtn" id="myInterestsButton"> Мои интересы</button>
+            <div class="dropdown-content" id="interests-list">
+                <a href="obomne.html#game">Компьютерные игры</a>
+                <a href="obomne.html#lampa">Люстры</a>
+                <a href="obomne.html#history">История</a>
+            </div>
+        </div>
+        <div id="current-time" class="current-time"></div>
+        <a href="#">История</a>
+    </nav>
+   
+    <main>
+        <h1>История просмотра</h1>
+
+        <section>
+            <h2>История текущего сеанса</h2>
+            <table id="sessionHistory">
+                <tr>
+                    <th>Страница</th>
+                    <th>Количество посещений</th>
+                </tr>
+            </table>
+
+            <h2>История за всё время</h2>
+            <table id="allTimeHistory">
+                <tr>
+                    <th>Страница</th>
+                    <th>Количество посещений</th>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <script src='scripts/history.js'></script>
+    <script src='scripts/arguments-interests.js'></script>
+</body>
+</html>
