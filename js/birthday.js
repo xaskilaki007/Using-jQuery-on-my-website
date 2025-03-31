@@ -35,16 +35,18 @@ const calendar = {
         const $birthdayInput = $("#birthday");
         const $calendarEl = $("#calendar");
 
-        $birthdayInput.on("focus", () => {
+        $birthdayInput.on("click", (e) => {
+            e.stopPropagation();
             this.calendarOpen = true;
-            $calendarEl.show();
-            const rect = $birthdayInput[0].getBoundingClientRect();
-            $calendarEl.css({
-                position: "absolute",
-                left: `${rect.left}px`,
-                top: `${rect.bottom + window.scrollY}px`
-            });
-        });
+            $("#calendar").show();
+          });
+          
+          $(document).on("click", (e) => {
+            if (!$(e.target).closest("#calendar, #birthday").length) {
+              this.calendarOpen = false;
+              $("#calendar").hide();
+            }
+          });
 
         $(document).on("mousedown", (e) => {
             if (!$calendarEl.is(e.target) && $calendarEl.has(e.target).length === 0 && !$birthdayInput.is(e.target)) {

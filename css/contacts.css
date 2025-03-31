@@ -1,3 +1,4 @@
+/*Файл contacts.css*/
 .navbar {
   list-style-type: none;
   margin: 0;
@@ -282,14 +283,17 @@ button:disabled {
 
 .calendar {
   width: 300px;
-  margin: -100px auto;
+  position: absolute;
+  top: calc(100% + 5px); /* Отступ от поля ввода */
+  left: 0;
+  z-index: 1000;
+  margin: 0;
   border: 1px solid #7ae29d;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #80a2ff;
   display: none;
 }
-
 .calendar-header {
   display: flex;
   justify-content: space-between;
@@ -413,7 +417,7 @@ button:disabled {
 }
 
 .form-row {
-  position: relative; /* Позволяет попверу позиционироваться относительно формы */
+  position: relative; /* Контекст для позиционирования календаря */
 }
 
 .form-row:hover .popover {

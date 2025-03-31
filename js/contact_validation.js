@@ -98,33 +98,43 @@ function setFieldValidity(field, isValid) {
 
 function setupResetConfirmation() {
     const resetButton = document.getElementById("resetButton");
+    const modal = document.getElementById("confirmationModal");
+    const confirmReset = document.getElementById("confirmReset");
+    const cancelReset = document.getElementById("cancelReset");
+    const modalClose = document.getElementById("modalClose");
+    const mainContent = document.querySelector("main"); // Получаем основной контейнер
 
     resetButton.addEventListener("click", () => {
-        const confirmation = confirm("Вы уверены, что хотите очистить форму?");
+        mainContent.classList.add("blur"); // Добавляем размытие на фон
+        modal.style.display = "block"; // Показываем модальное окно
+    });
 
-        if (confirmation) {
-            const form = document.getElementById("contactForm");
-            const fields = form.querySelectorAll("input:not([readonly]), textarea, select");
-            const submitButton = document.getElementById("submitButton"); // Добавлено
+    confirmReset.addEventListener("click", () => {
+        const form = document.getElementById("contactForm");
+        form.reset();
+        const fields = form.querySelectorAll("input:not([readonly]), textarea, select");
+        fields.forEach(field => {
+            field.classList.remove("valid", "invalid");
+        });
+        modal.style.display = "none"; // Закрываем модальное окно
+        mainContent.classList.remove("blur"); // Убираем размытие
+    });
 
-            form.reset();
-            fields.forEach(field => {
-                field.classList.remove("valid", "invalid");
-                // Сбрасываем видимость сообщения об ошибке
-                const errorMessage = field.nextElementSibling;
-                if (errorMessage && errorMessage.classList.contains('error-message')) { // Проверяем, что элемент существует и является сообщением об ошибке
-                    errorMessage.style.display = "none";
-                }
+    cancelReset.addEventListener("click", () => {
+        modal.style.display = "none"; // Закрываем модальное окно
+        mainContent.classList.remove("blur"); // Убираем размытие
+    });
 
-                if (field.tagName === "INPUT" || field.tagName === "TEXTAREA") {
-                    field.value = "";
-                } else if (field.tagName === "SELECT") {
-                    field.selectedIndex = 0;
-                }
-            });
+    modalClose.addEventListener("click", () => {
+        modal.style.display = "none"; // Закрываем модальное окно
+        mainContent.classList.remove("blur"); // Убираем размытие
+    });
 
-            // Дополнительно: отключаем кнопку "Отправить" после сброса формы
-            submitButton.disabled = true;
+    // Закрытие модального окна при клике вне его
+    window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            mainContent.classList.remove("blur"); // Убираем размытие
         }
     });
 }
